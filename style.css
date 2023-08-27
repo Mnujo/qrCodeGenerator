@@ -1,0 +1,187 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100dvh;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.container{
+    
+
+    width: 100%;
+    min-height: 90dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    transition-duration: 2s;
+    background: radial-gradient(whitesmoke, #23003e);
+}
+
+
+header{
+    
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: #36454f;
+    height: 10vh;
+    font-size: 1.5rem;
+    color: #f4f4f8;
+    font-weight: 900;
+}
+
+
+.h22{
+    position: relative;
+    top: -50px;
+    left: 40%;  
+}
+
+
+
+.qrcode{
+    
+
+    width: 400px;
+    border-radius: 5px;
+    padding: 25px 35px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    box-shadow:  0 6px 8px rgba(0, 0, 0, 0.808);
+    background-color: #36454f15;
+}
+
+#qrBox{
+    visibility: hidden;
+    margin: 15px;
+    padding: 20px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+
+#qrBox.show{
+    visibility: visible;
+    transition-delay: .5s;
+}
+
+
+input{
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+button{
+    width: 75%;
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color: #343d462c;
+    color: #fff;
+    font-size: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+p{
+    margin: 10px;
+    font-size: 35px;
+}
+
+@media  screen and (max-width: 260px) {
+    .container{
+        min-width: 100dvh;
+    }
+    .qrcode{
+        width: 150px;
+    }
+    p{
+        font-size: 15px;
+    }
+    input{
+        padding: 8px;
+        font-size: 10px;
+        width: 100%;
+    }
+    button{
+        padding: 8px;
+        font-size: 10px;
+    }
+    #qrImage{
+        width: 100px;
+    }
+   
+}
+
+@media  screen and (max-width: 340px) {
+    .qrcode{
+        width: 300px;
+    }
+    p{
+        font-size: 20px;
+    }
+    input{
+        padding: 10px;
+        font-size: 15px;
+    }
+} 
+
+@media  screen and (max-width: 375px) {
+    
+    p{
+        font-size: 20px;
+    }
+    input{
+        padding: 10px;
+    }
+} 
+
+
+
+.error{
+    animation: shake .5s linear infinite;
+}
+
+@keyframes shake {
+    0%{
+        transform: translate(4px);
+        transform: skew(2deg);
+    }
+
+    25%{
+        transform: translate(-4px);
+    }
+
+    50%{
+        transform: translate(4px);
+    }
+
+    75%{
+        transform: translate(-4px);
+    }
+
+    100%{
+        transform: translate(4px);
+    }
+}
+
+
+
+

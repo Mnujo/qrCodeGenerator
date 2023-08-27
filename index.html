@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qr code Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <header>Welcome</header>
+    <div class="container">
+        
+        <div class="qrcode">
+            <p>Generate Qr code</p>
+            <input type="text" placeholder="Enter Text Or Url" id="inputBox">
+                <div id="qrBox">
+                    <img src="" id="qrImage">
+                </div>
+            <button onclick="qrCode()" id="btn"> Generate Q </button>
+            <!-- <button type="button"  data-download="qrImage">Download </button> -->
+        </div>
+
+    </div>
+  
+    <script src="script.js"></script>
+</body>
+</html>
